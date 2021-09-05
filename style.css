@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainDiv{
+    /* background-image: url(./images/background.jpg); */
+    background-color: #6692B8;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width: 70%;
+    height: 500px;
+    margin: 50px auto;
+}
+#myForm{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+        margin: 0px auto;
+        height: 100px;
+        padding-top: 50px;
+}
+#myForm input{
+background-color: #A6B1BB;
+border-radius: 10px;
+border: none;
+outline: none;
+width: 100%;
+padding-left: 30px;
+color: white;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+font-family: Brush Script MT (cursive);
+}
+#myForm button {
+    background-color:#44c767;
+	border-radius:10px;
+	border:1px solid #18ab29;
+	display:inline-block;
+    margin-left: 30px;
+    width: 18%;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: Brush Script MT (cursive);
+	font-size:17px;
+	text-decoration:none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#myForm button:hover {
+	background-color:#3f831d;
+    color: #111111;
+}
+ul#todos {
+    display: flex;
+    flex-direction: column;
+    width: 57%;
+    /* background: aquamarine; */
+    margin-top: 20px;
+    margin: 20px 0 0 143px;
+    height: 40px;
+}
+li {
+    background-color: #A6B1BB;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+button.btn {
+    background:#3078B9;
+    border: none;
+    border-radius: 10px;
+    width: 35px;
+    height: 30px;
+}

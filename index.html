@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pure Js</title>
+    <link rel="stylesheet" href="./style.css" />
 
-  <style>
-.btn{
-  background: black;
-    color: white;
-}
-  </style>
-</head>
-<body>
-  <form id="myForm">
-    <input placeholder="Enter Todo" id="todo" />
-    <button type="submit">Enter Todo</button>
-  </form> 
-
-  <ul id="todos">
-  </ul>
-
-  <script>
-      
-    // lets target form
-
-    const todos = document.getElementById('todos')
-
-    document.getElementById('myForm').addEventListener('submit', (e) => {
-        e.preventDefault()
-      const value = document.getElementById('todo').value
-
-      // create element li
-      const li = document.createElement('li')
-      const button = document.createElement('button')
-
-      const buttonText = document.createTextNode('X')
-
-      button.className = 'btn'
-
-      button.appendChild(buttonText)
-
-      const nodeValue = document.createTextNode(value)
-
-      li.appendChild(nodeValue)
-      li.appendChild(button)
-
-
-      // Removing Text Node
-
-      button.onclick = function(e){
-          // target parent
-        const parentNode = e.target.parentElement
-
-        todos.removeChild(parentNode)
+    <!-- <style>
+      .btn {
+        background: black;
+        color: white;
       }
-      
-      todos.appendChild(li)
+    </style> -->
+  </head>
+  <body>
+    <div class="mainDiv">
+      <form id="myForm">
+        <input placeholder="Enter Todo" id="todo" />
+        <button type="submit">Enter Todo</button>
+      </form>
 
-      document.getElementById('myForm').reset()
+      <ul id="todos"></ul>
+    </div>
 
+    <script>
+      // lets target form
 
-    })
+      const todos = document.getElementById("todos");
 
-  </script>
-</body>
+      document.getElementById("myForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const value = document.getElementById("todo").value;
+
+        // create element li
+        const li = document.createElement("li");
+        const button = document.createElement("button");
+
+        const buttonText = document.createTextNode("X");
+
+        button.className = "btn";
+
+        button.appendChild(buttonText);
+
+        const nodeValue = document.createTextNode(value);
+
+        li.appendChild(nodeValue);
+        li.appendChild(button);
+
+        // Removing Text Node
+
+        button.onclick = function (e) {
+          // target parent
+          const parentNode = e.target.parentElement;
+
+          todos.removeChild(parentNode);
+        };
+
+        todos.appendChild(li);
+
+        document.getElementById("myForm").reset();
+      });
+    </script>
+  </body>
 </html>
