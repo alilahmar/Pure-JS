@@ -45,6 +45,11 @@
 
         li.appendChild(nodeValue);
         li.appendChild(button);
+        // Create a button for Edit
+        const buttonEdit = document.createElement("button");
+        const buttonEditText = document.createTextNode("Edit");
+        buttonEdit.appendChild(buttonEditText);
+        li.appendChild(buttonEdit);
 
         // Removing Text Node
 
@@ -55,6 +60,14 @@
           todos.removeChild(parentNode);
         };
 
+        // condition if the input is empty
+        if (value == "") {
+          alert("Please write something");
+          return;
+        }
+
+        // Edit text
+        
         todos.appendChild(li);
 
         document.getElementById("myForm").reset();
